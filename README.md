@@ -4,7 +4,7 @@
 
 *Code accompanying the paper:*
 
-R. Rickenbach*, J. Trisovic*, A. Didier, J. Sieber, and M. N. Zeiligner, "[Task-Level Insights from Eigenvalues across Sequence Models](https://www.sciencedirect.com/science/article/pii/S0005109825003607)".
+R. Rickenbach*, J. Trisovic*, A. Didier, J. Sieber, and M. N. Zeiligner, "Task-Level Insights from Eigenvalues across Sequence Models".
 
 The paper is available on [arXiv](https://arxiv.org/abs/2406.12573).
 
