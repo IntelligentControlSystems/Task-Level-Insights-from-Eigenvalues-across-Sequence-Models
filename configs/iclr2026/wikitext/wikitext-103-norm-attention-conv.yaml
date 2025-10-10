@@ -1,0 +1,57 @@
+seed: 1919
+save: "./checkpoint/wikitext-norm-attention-conv"
+dataset:
+  name: "WikiText"
+  _name_: "wikitext"
+  version: 103
+  block_size: 1024
+  data_dir: ""
+  fixed_size: True
+train:
+  total_steps: 130000
+  batch_size: 8
+  lr: 0.001
+  wd: 0.1
+  warmup_steps: 3000
+  eval_every: 1000
+  betas: [0.9, 0.95]
+  param_group: ~
+model:
+  # task specific dims
+  input_dim: 1
+  output_dim: 50257
+  # backbone model
+  layer: "transformer"
+  attention_fn: "norm-attention"
+  mode: "attention"
+  norm_fn: "softplus"
+  approx_fn: "elu"  # could try none
+  scale_B: True
+  offset: True
+  offset_init: "exp"
+  learn_A: False # set this to False!
+  dim_conv: 4
+  use_flash: False
+  num_layers: 6
+  hidden_dim: 512
+  state_dim: 512
+  num_heads: 8
+  att_dropout: 0.0
+  norm: "layer"
+  # embedding & positional embedding
+  embedding: True
+  vocab_size: 50257 
+  max_pos_embed: 0
+  # mlp
+  mixer: "mlp"
+  mixer_dim: 512
+  # global dropout rate
+  dropout: 0.0
+  # classifier
+  classifier: False
+  pooling: "mean"
+  # use dual classification
+  dual: False
+
+
+

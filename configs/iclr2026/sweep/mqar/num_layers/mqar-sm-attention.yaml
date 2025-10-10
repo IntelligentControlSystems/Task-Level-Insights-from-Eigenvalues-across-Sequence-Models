@@ -1,0 +1,6 @@
+base_config: "iclr2026/mqar/mqar-sm-attention.yaml"
+sweep:
+    train:
+      lr: [0.0001, 0.00046416, 0.00215443, 0.01]
+    model:
+      num_layers: [1, 4]

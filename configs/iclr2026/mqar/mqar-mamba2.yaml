@@ -1,0 +1,44 @@
+seed: 1919
+save: "./checkpoint/mqar-mamba2"
+dataset:
+  name: "MQAR"
+  _name_: "mqar"
+  input_seq_length: 512
+  num_kv_pairs: 64
+  data_dir: ""
+  fixed_size: True
+train:
+  total_steps: 40_000
+  batch_size: 64
+  lr: 0.01
+  wd: 0.1
+  eval_every: 200
+  param_group: ~
+  stop_criterion: 0.99 # accuracy
+  cosine_anneal: True
+  warmup_steps: 4_000
+model:
+  layer: "mamba"
+  version: "mamba2"
+  num_layers: 2
+  num_heads: 1
+  input_dim: 1
+  output_dim: 8_192
+  hidden_dim: 128
+  state_dim: 128
+  conv_dim: 4
+  expansion: 1
+  dropout: 0.0
+  glu: True
+  norm: "layer"
+  dual: False
+  prenorm: True
+  mixer: "none"
+  mixer_dim: 128
+  # classifier
+  classifier: False
+  pooling: "none"
+  embedding: True
+  token_embedding: True
+  vocab_size: 8_192
+  max_pos_embed: 512

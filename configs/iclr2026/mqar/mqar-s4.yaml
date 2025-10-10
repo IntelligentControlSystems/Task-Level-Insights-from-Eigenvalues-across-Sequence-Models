@@ -1,0 +1,42 @@
+seed: 1919
+save: "./checkpoint/mqar-s4"
+dataset:
+  name: "MQAR"
+  _name_: "mqar"
+  input_seq_length: 512
+  num_kv_pairs: 64
+  data_dir: ""
+  fixed_size: True
+train:
+  total_steps: 40_000
+  batch_size: 64
+  lr: 0.00046416
+  wd: 0.1
+  ssm_lr: 0.001
+  lr_min: 0.0000001
+  reduce_factor: 0.5
+  lr_patience: 200 #must be in eval_every steps!
+  warmup_steps: 4_000
+  cosine_anneal: True
+  eval_every: 200
+  param_group: ~
+  stop_criterion: 0.99 # accuracy
+model:
+  layer: "s4"
+  dt_min: 0.001
+  dt_max: 0.1
+  num_layers: 2
+  activation: "full_glu"
+  input_dim: 8_192
+  output_dim: 8_192
+  hidden_dim: 128
+  state_dim: 128
+  dropout: 0.1
+  norm: "batch"
+  pooling: "none"
+  ssm_lr_vars: ["Lambda_re", "Lambda_im", "P", "B", "log_step"]
+  prenorm: False
+  dual: False
+  decode: False
+optimization:
+  jax_seed: 1919

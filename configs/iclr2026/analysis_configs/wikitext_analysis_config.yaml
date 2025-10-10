@@ -1,0 +1,2 @@
+batch_size: 8
+save_path: "./analysis/results/" 

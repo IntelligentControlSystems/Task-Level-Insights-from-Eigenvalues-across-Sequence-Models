@@ -1,0 +1,38 @@
+seed: 1919
+save: "./checkpoint/listops-mamba2"
+dataset:
+  name: "LISTOPS"
+  _name_: "listops"
+  data_dir: "./lra_release/listops"
+  fixed_size: False
+train:
+  num_epochs: 50
+  batch_size: 50
+  lr: 0.0005
+  wd: 0.01
+  warmup: 5
+  cosine_anneal: True
+  param_group: ~
+model:
+  layer: "mamba"
+  version: "mamba2"
+  num_layers: 6
+  num_heads: 4
+  input_dim: 1
+  output_dim: 10
+  hidden_dim: 128
+  state_dim: 64
+  conv_dim: 4
+  expansion: 1
+  dropout: 0.0
+  glu: True
+  norm: "layer"
+  dual: False
+  prenorm: True
+  pooling: "mean"
+  embedding: True
+  token_embedding: True
+  vocab_size: 134
+  max_pos_embed: 4096
+
+

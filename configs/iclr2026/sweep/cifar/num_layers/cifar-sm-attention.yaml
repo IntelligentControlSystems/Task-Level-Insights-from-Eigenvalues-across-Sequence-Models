@@ -1,0 +1,4 @@
+base_config: "iclr2026/cifar/cifar-sm-attention.yaml"
+sweep:
+    model:
+      num_layers: [1, 4]

@@ -1,0 +1,3 @@
+base_config: "iclr2026/mqar/mqar-sm-attention.yaml"
+sweep:
+    seed: [1919, 2222, 2929, 1717]
