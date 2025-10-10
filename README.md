@@ -12,7 +12,7 @@ This paper shows that eigenvalues offer a metric for memory retention and select
 ## Folder Structure
 ```
 
-analysis/        # scripts for eigenvalue analysis 
+analysis/        # scripts for eigenvalue analysis
 configs/         # contains training config files
 dataloaders/     # contains all task loaders
 jax_helpers/     # contains all auxiliary jax functions
@@ -25,7 +25,7 @@ requirements.txt
 
 ```
 
-## Installation 
+## Installation
 
 The working setup is shown below (output of `python -m pip freeze --user`):
 ```
@@ -63,7 +63,7 @@ xxhash==3.4.1
 -e git+https://gitlab.ethz.ch/ics-group/projects/jerome-sieber/p2025a-seqmodinsights.git@cf56a8fa6618979a48fe2500cdf3cedb5b476d84#egg=zoology&subdirectory=zoology
 
 ```
-*Note:* You might need to update huggingface-hub to newest version 
+*Note:* You might need to update huggingface-hub to newest version
 
 ## Data Preparation
 
@@ -76,7 +76,7 @@ field determines where the data will be downloaded.
 To train the specific model configuration on a particular task, run:
 
 ```
-python launch.py --config [config-file].yaml 
+python launch.py --config [config-file].yaml
 ```
 
 Additional arguments can be provided, for example, `--sweep True` indicates that the specified configuration file is a sweep over certain hyperparameters, and by adding `--analysis_config iclr2026/[analysis-config-file].yaml`, it is indicated that the eigenvalues should be computed and stored on W&B, with the size of the evaluation batch specified in the .yaml file.
@@ -95,14 +95,42 @@ If the trained model should be saved, set the save parameter in the .yaml config
 The training is logged via W&B. To successfully log the training add the following W&B login information to the .yaml configurations:
 ```
 wandb:
-  group: "..." # name of the group displayed in W&B 
+  group: "..." # name of the group displayed in W&B
   name: "..." # name of the run displayed in W&B
   key: "..." # your API key
   entity: "..." # name of the entity within your W&B profile where the runs should be saved
-  project: "..." # name of the project 
+  project: "..." # name of the project
 ```
-Note that the result of the analysis script is saved to W&B if the information above is provided, otherwise it is saved locally in the path provided in the analysis configuration. Additionally, if the 
+Note that the result of the analysis script is saved to W&B if the information above is provided, otherwise it is saved locally in the path provided in the analysis configuration. Additionally, if the
 model is not saved, the eigenvalue analysis is not performed (it is skipped).
+
+## License
+
+Licensed with BSD-2-Clause
+
+''' Copyright (c) 2025 ETH Zurich, Institute for Dynamics Systems and Control, Rahel Rickenbach,
+Jelena Trisovic, Alexandre Didier, Jerome Sieber, Melanie N. Zeilinger. No rights reserved. '''
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation and/or
+other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ## Citation
 
