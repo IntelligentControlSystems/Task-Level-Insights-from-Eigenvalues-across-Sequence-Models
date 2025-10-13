@@ -1,6 +1,6 @@
 # Task-Level Insights from Eigenvalues across Sequence Models
 
-[GitHub](https://github.com/IntelligentControlSystems/filter-sltmpc) | [Paper](https://www.sciencedirect.com/science/article/pii/S0005109825003607) | [Issues](https://github.com/IntelligentControlSystems/filter-sltmpc/issues)
+[GitHub](https://github.com/IntelligentControlSystems/Task-Level-Insights-from-Eigenvalues-across-Sequence-Models) | [Paper](https://arxiv.org/abs/2510.09379) | [Issues](https://github.com/IntelligentControlSystems/Task-Level-Insights-from-Eigenvalues-across-Sequence-Models/issues)
 
 *Code accompanying the paper:*
 
