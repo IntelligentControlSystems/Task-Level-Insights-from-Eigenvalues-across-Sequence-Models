@@ -1,3 +1,6 @@
+''' Copyright (c) 2025 ETH Zurich, Institute for Dynamics Systems and Control, Rahel Rickenbach, 
+Jelena Trisovic, Alexandre Didier, Jerome Sieber, Melanie N. Zeilinger. No rights reserved. '''
+
 import torch
 from torch import nn
 import torch.nn.functional as F
