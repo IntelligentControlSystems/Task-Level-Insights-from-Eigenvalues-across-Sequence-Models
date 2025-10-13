@@ -6,7 +6,7 @@
 
 R. Rickenbach*, J. Trisovic*, A. Didier, J. Sieber, and M. N. Zeiligner, "Task-Level Insights from Eigenvalues across Sequence Models".
 
-The paper is available on [arXiv](https://arxiv.org/abs/2406.12573).
+The paper is available on [arXiv](https://arxiv.org/abs/2510.09379).
 
 This paper shows that eigenvalues offer a metric for memory retention and selective forgetting in sequence models, guiding model design choices to meet task requirements.
 ## Folder Structure
@@ -137,10 +137,10 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 If you find this method helpful, please cite our work:
 
 ```bib
-@article{Rickenbach2025,
-title = {Task-Level Insights from Eigenvalues across Sequence Models},
-year = {2025},
-url = {https://www.sciencedirect.com/science/article/pii/S0005109825003607},
-author = {Rahel Rickenbach and Jelena Trisovic and Alexandre Didier and Jerome Sieber and  Melanie N. Zeilinger},
+@misc{rickenbach2025tasklevelinsightseigenvaluessequence,
+      title={Task-Level Insights from Eigenvalues across Sequence Models},
+      author={Rahel Rickenbach and Jelena Trisovic and Alexandre Didier and Jerome Sieber and Melanie N. Zeilinger},
+      year={2025},
+      url={https://arxiv.org/abs/2510.09379},
 }
 ```
