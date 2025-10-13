@@ -63,7 +63,7 @@ xxhash==3.4.1
 -e git+https://gitlab.ethz.ch/ics-group/projects/jerome-sieber/p2025a-seqmodinsights.git@cf56a8fa6618979a48fe2500cdf3cedb5b476d84#egg=zoology&subdirectory=zoology
 
 ```
-*Note:* You might need to update huggingface-hub to newest version
+*Note:* You might need to update huggingface-hub to newest version.
 
 ## Data Preparation
 
