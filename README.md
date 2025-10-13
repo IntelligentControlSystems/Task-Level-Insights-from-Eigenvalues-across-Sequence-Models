@@ -68,8 +68,7 @@ xxhash==3.4.1
 ## Data Preparation
 
 Data for all tasks except for ListOps is automatically downloaded.
-For ListOps, the data can be downloaded [here](https://storage.googleapis.com/long-range-arena/lra_release.gz). Make sure to specify the path to the data location, by setting `data_dir` in the corresponding yaml configuration file. For other tasks, this
-field determines where the data will be downloaded.
+For ListOps, the data can be downloaded [here](https://storage.googleapis.com/long-range-arena/lra_release.gz). Make sure to specify the path to the data location, by setting `data_dir` in the corresponding yaml configuration file. For other tasks, this field determines where the data will be downloaded.
 
 ## Running Tasks
 
