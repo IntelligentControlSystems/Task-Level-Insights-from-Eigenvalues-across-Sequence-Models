@@ -17,6 +17,7 @@ configs/         # contains training config files
 dataloaders/     # contains all task loaders
 jax_helpers/     # contains all auxiliary jax functions
 models/          # contains all models
+notebooks/       # contains all notebooks
 launch.py        # entry point for execution
 train.py         # training script, called by launch.py
 README.md
